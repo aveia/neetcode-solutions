@@ -7,9 +7,8 @@ class Solution:
         m = nums[0]
         s = 0
         for x in nums:
-            s += x
-            if s > m:
-                m = s
             if s < 0:
                 s = 0
+            s += x
+            m = max(s, m)
         return m
