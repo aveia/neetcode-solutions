@@ -23,8 +23,7 @@ class Solution:
                     continue
                 c = rem + 1
                 min_coins = c if min_coins == -1 else min(min_coins, c)
-            
+
             qty_coins[am] = min_coins
-        
+
         return qty_coins[amount]
-                    
