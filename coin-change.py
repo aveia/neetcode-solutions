@@ -4,7 +4,7 @@
 
 class Solution:
     def coinChange(self, coins: list[int], amount: int) -> int:
-        
+
         qty_coins = [-1] * (amount + 1)
         qty_coins[0] = 0
 
@@ -13,7 +13,7 @@ class Solution:
             if am in coins:
                 qty_coins[am] = 1
                 continue
-            
+
             min_coins = -1
             for coin in coins:
                 if am - coin < 0:

@@ -9,7 +9,7 @@ class Solution:
         for a, b in edges:
             adj_list[a].append(b)
             adj_list[b].append(a)
-        
+
         visited = set()
 
         def visit(src):

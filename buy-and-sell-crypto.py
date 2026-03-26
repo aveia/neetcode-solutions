@@ -1,4 +1,4 @@
-# 
+# best time to buy and sell stock
 # https://neetcode.io/problems/buy-and-sell-crypto/question
 # code by aveia@github
 
