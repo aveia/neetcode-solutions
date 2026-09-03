@@ -3,7 +3,7 @@
 # code by aveia@github
 
 class Solution:
-    def sortArray(self, xs: List[int]) -> List[int]:
+    def sortArray(self, xs: list[int]) -> list[int]:
 
         def left(i):
             return i * 2

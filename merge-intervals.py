@@ -3,7 +3,7 @@
 # code by aveia@github
 
 class Solution:
-    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+    def merge(self, intervals: list[list[int]]) -> list[list[int]]:
         intervals = sorted(intervals)
         out = [intervals[0]]
         for i in range(1, len(intervals)):

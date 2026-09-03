@@ -4,24 +4,24 @@
 
 class Solution:
     def solve(self, board: list[list[str]]) -> None:
-        h, w = len(board), len(board[0])
+        lines, columns = len(board), len(board[0])
 
         def bucket(l, c):
             nonlocal board
-            if 0 <= l < h and 0 <= c < w and board[l][c] == 'O':
+            if 0 <= l < lines and 0 <= c < columns and board[l][c] == 'O':
                 board[l][c] = 'S'
                 bucket(l - 1, c)
                 bucket(l + 1, c)
                 bucket(l, c - 1)
                 bucket(l, c + 1)
 
-        for l in range(h):
+        for l in range(lines):
             bucket(l, 0)
-            bucket(l, w - 1)
-        for c in range(w):
+            bucket(l, columns - 1)
+        for c in range(1, columns - 1): # skip first and last columns
             bucket(0, c)
-            bucket(h - 1, c)
+            bucket(lines - 1, c)
 
-        for l in range(h):
-            for c in range(w):
+        for l in range(lines):
+            for c in range(columns):
                 board[l][c] = 'O' if board[l][c] == 'S' else 'X'
