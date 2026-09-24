@@ -14,7 +14,7 @@ class MyHashMap:
     def insert(self, key, val, idx):
         t = self.table[idx]
         t.extend([None])
-        i = len(t) - 1
+        i = len(t) - 1 # invariant: t[i] is safe to overwrite
         while i - 1 >= 0 and t[i - 1][0] > key:
             t[i] = t[i - 1]
             i -= 1
