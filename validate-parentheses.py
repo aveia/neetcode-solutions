@@ -1,5 +1,5 @@
 # valid parentheses
-# https://neetcode.io/problems/valid-parentheses/question
+# https://neetcode.io/problems/validate-parentheses/question
 # code by aveia@github
 
 class Solution:
