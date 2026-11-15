@@ -3,7 +3,7 @@
 # code by aveia@github
 
 class Solution:
-    def plusOne(self, digits: List[int]) -> List[int]:
+    def plusOne(self, digits: list[int]) -> list[int]:
         digits.reverse()
 
         i, n = 0, len(digits)
